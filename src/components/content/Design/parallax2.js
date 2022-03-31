@@ -15,7 +15,7 @@ function Parallax2() {
             borderRadius: "30px"
           })}
           component="img"
-          src="/resources/images/phoneDemo.png"
+          src="/resources/images/phonedemo.png"
         />
       </Parallax>
       <Parallax speed={-10}>
