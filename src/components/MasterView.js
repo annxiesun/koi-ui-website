@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Features, Demo } from "./content";
+import { Header, Features, Demo, Design } from "./content";
 import { Container } from "@mui/material";
 
 function MasterView() {
@@ -8,6 +8,7 @@ function MasterView() {
       <Header />
       <Features />
       <Demo />
+      <Design />
     </Container>
   );
 }

@@ -13,6 +13,8 @@ function Features() {
       })}
       container
       justifyContent="center"
+      alignItems="center"
+      alignContent="center"
       height="100vh">
       <Grid marginBottom={10} xs={9} container justifyContent="center">
         <Typography align="center" variant="header2">

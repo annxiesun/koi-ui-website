@@ -1,28 +1,90 @@
 import React from "react";
-
-import { Grid, Typography, Button } from "@mui/material";
+import { ParallaxProvider } from "react-scroll-parallax";
+import { Grid, Typography } from "@mui/material";
+import Parallax1 from "./parallax1";
+import Parallax2 from "./parallax2";
 
 function Design() {
   return (
-    <Grid padding={10} container alignContent="center" height="100vh">
-      <Grid marginBottom={10} xs={9}>
-        <Typography variant="header1">{text[0]}</Typography>
-        <Typography variant="body1">{text[1]}</Typography>
+    <ParallaxProvider>
+      <Grid
+        padding={10}
+        container
+        justifyContent="center"
+        alignItems="center"
+        flexDirection="column"
+        height="auto">
+        <Grid marginBottom={50} xs={9} container justifyContent="center">
+          <Typography align="center" variant="header2">
+            {text[0]}
+          </Typography>
+          <Typography align="center" variant="header4">
+            {text[1]}
+          </Typography>
+        </Grid>
+        <Grid
+          marginBottom={50}
+          container
+          flexDirection="row"
+          alignItems="center"
+          justifyContent="space-between">
+          <Grid flexDirection="column" xs={6}>
+            <Typography variant="header3">{content[0].title}</Typography>
+            <Typography variant="body1">{content[0].text}</Typography>
+          </Grid>
+          {content[0].graphic}
+        </Grid>
+        <Grid
+          marginBottom={50}
+          container
+          flexDirection="row"
+          alignItems="center"
+          justifyContent="space-between">
+          {content[1].graphic}
+          <Grid flexDirection="column" xs={6}>
+            <Typography variant="header3">{content[1].title}</Typography>
+            <Typography variant="body1">{content[1].text}</Typography>
+          </Grid>
+        </Grid>
+        <Grid
+          marginBottom={30}
+          container
+          flexDirection="row"
+          justifyContent="space-between">
+          <Grid flexDirection="column" xs={6}>
+            <Typography variant="header3">{content[2].title}</Typography>
+            <Typography variant="body1">{content[2].text}</Typography>
+          </Grid>
+          {content[0].graphic}
+        </Grid>
       </Grid>
-      <Grid container flexDirection="row" justifyContent="flex-start">
-        <Typography variant="body1">{"npm i @react-native-koi-ui"}</Typography>
-        <Button>{"Get Started"}</Button>
-        <Button variant="outlined">{"Github"}</Button>
-      </Grid>
-    </Grid>
+    </ParallaxProvider>
   );
 }
 
 Design.propTypes = {};
 
 const text = [
-  "Create Seamless Mobile Experiences",
-  "Koi UI is the first fully customizable, mobile-first React Native Library"
+  "A Unique Design Philosphy",
+  "Inspired by leading modern day apps"
+];
+
+const content = [
+  {
+    graphic: <Parallax1 />,
+    title: "Minimal Color",
+    text: "Focus on simplicity where colours have meaning."
+  },
+  {
+    graphic: <Parallax2 />,
+    title: "Mobile First",
+    text: "Components built around the best modern mobile app practices."
+  },
+  {
+    graphic: <Parallax1 />,
+    title: "Consistency being key",
+    text: "A fast and simple solution for highly customized components through theming"
+  }
 ];
 
 export default Design;
