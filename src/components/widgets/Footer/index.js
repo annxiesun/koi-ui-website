@@ -1,29 +1,44 @@
 import React from "react";
-import { withStyles } from "@material-ui/core/styles";
-import { Grid, Typography, Button } from "@mui/material";
-import styles from "./styles";
 
-function Header() {
+import { Grid, IconButton, CardMedia, Typography } from "@mui/material";
+import { Github, Discord } from "../Icons";
+
+function Footer() {
   return (
-    <Grid padding={10} container alignContent="center" height="100vh">
-      <Grid marginBottom={10} xs={9}>
-        <Typography variant="header1">{text[0]}</Typography>
-        <Typography variant="body1">{text[1]}</Typography>
-      </Grid>
-      <Grid container flexDirection="row" justifyContent="flex-start">
-        <Typography variant="body1">{"npm i @react-native-koi-ui"}</Typography>
-        <Button>{"Get Started"}</Button>
-        <Button variant="outlined">{"Github"}</Button>
+    <Grid
+      sx={{
+        backgroundColor: "#FFF",
+        borderRadius: "32px",
+        width: "100%",
+        zIndex: 90,
+        boxSizing: "border-box",
+        paddingBottom: "30px"
+      }}
+      padding={10}
+      container
+      alignContent="center"
+      alignItems="center"
+      justifyContent="center">
+      <Grid container alignItems="center" flexDirection="column">
+        <Typography variant="body2">Made proudly in 🇨🇦</Typography>
+        <Grid marginBottom={6}>
+          <IconButton>
+            <Github fill="grey" height="20px" width="20px" />
+          </IconButton>
+          <IconButton sx={{ marginLeft: "8px" }}>
+            <Discord fill="grey" height="20px" width="20px" />
+          </IconButton>
+        </Grid>
+        <CardMedia
+          component="img"
+          sx={{ height: "30px", width: "100px", objectFit: "contain" }}
+          src={"resources/images/logoicon.svg"}
+        />
       </Grid>
     </Grid>
   );
 }
 
-Header.propTypes = {};
+Footer.propTypes = {};
 
-const text = [
-  "Create Seamless Mobile Experiences",
-  "Koi UI is the first fully customizable, mobile-first React Native Library"
-];
-
-export default withStyles(styles)(Header);
+export default Footer;

@@ -20,7 +20,7 @@ function Features() {
         <Typography align="center" variant="header2">
           {text[0]}
         </Typography>
-        <Typography align="center" variant="header4">
+        <Typography align="center" variant="header5">
           {text[1]}
         </Typography>
       </Grid>

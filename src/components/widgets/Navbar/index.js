@@ -1,22 +1,23 @@
 import React from "react";
 
-import { Grid, IconButton, Button, CardMedia } from "@mui/material";
+import { Box, Grid, IconButton, Button, CardMedia } from "@mui/material";
 import { Github, Discord } from "../Icons";
 
 function Navbar() {
   return (
     <Grid
-      sx={{
+      sx={(theme) => ({
         backgroundColor: "#FFF",
-        borderRadius: "32px",
+        borderRadius: "24px",
         position: "fixed",
         top: "10px",
         left: "50%",
         width: "95%",
         zIndex: 90,
         boxSizing: "border-box",
-        transform: "translateX(-50%)"
-      }}
+        transform: "translateX(-50%)",
+        boxShadow: theme.shadows[1]
+      })}
       padding={2}
       container
       alignContent="center"
@@ -34,7 +35,9 @@ function Navbar() {
         <IconButton sx={{ marginLeft: "8px" }}>
           <Discord fill="grey" height="30px" width="30px" />
         </IconButton>
-        <Button sx={{ marginLeft: "8px" }}>{"Docs"}</Button>
+        <Button variant="outlined" sx={{ marginLeft: "8px" }}>
+          {"Docs"}
+        </Button>
       </Grid>
     </Grid>
   );

@@ -11,22 +11,22 @@ function DiscordBanner() {
       alignContent="center"
       alignItems="center"
       justifyContent="space-between">
-      <Grid container xs={9} flexDirection="row" alignItems="center">
+      <Grid container xs={8} flexDirection="row" alignItems="center">
         <CardMedia
           component="img"
           sx={{ height: "50px", width: "auto", marginRight: "24px" }}
           src="resources/images/discord.svg"
         />
         <Grid>
-          <Typography sx={{ color: "white" }} variant="header3">
+          <Typography sx={{ color: "white" }} variant="header4">
             {text[0]}
           </Typography>
-          <Typography sx={{ color: "white" }} variant="body1">
+          <Typography sx={{ color: "white" }} variant="body2">
             {text[1]}
           </Typography>
         </Grid>
       </Grid>
-      <Button>{"Join the #Koi Discord"}</Button>
+      <Button variant="text">{"Join the #Koi Discord"}</Button>
     </Grid>
   );
 }

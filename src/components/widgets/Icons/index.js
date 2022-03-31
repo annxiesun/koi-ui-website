@@ -1,4 +1,5 @@
 import Discord from "./Discord";
 import Github from "./Github";
+import Clipboard from "./Clipboard";
 
-export { Discord, Github };
+export { Discord, Github, Clipboard };

@@ -1,6 +1,7 @@
 import React from "react";
 
-import { Grid, Typography, Button } from "@mui/material";
+import { Grid, Typography, Button, IconButton } from "@mui/material";
+import { Github, Clipboard } from "../../widgets/Icons";
 
 function Header() {
   return (
@@ -14,10 +15,38 @@ function Header() {
         <Typography variant="header1">{text[0]}</Typography>
         <Typography variant="body1">{text[1]}</Typography>
       </Grid>
-      <Grid container flexDirection="row" justifyContent="flex-start">
-        <Typography variant="body1">{"npm i @react-native-koi-ui"}</Typography>
-        <Button>{"Get Started"}</Button>
-        <Button variant="outlined">{"Github"}</Button>
+      <Grid
+        container
+        flexDirection="row"
+        justifyContent="flex-start"
+        alignItems="center">
+        <Grid
+          container
+          item
+          xs={5}
+          alignItems="center"
+          justifyContent="space-between"
+          sx={{
+            borderRadius: "14px",
+            padding: "8px 16px",
+            backgroundColor: "#ededed"
+          }}
+          variant="body1">
+          <Typography
+            sx={{ fontFamily: "Poppins", color: "#595959" }}
+            variant="body2">
+            {"npm i @react-native-koi-ui"}
+          </Typography>
+          <IconButton>
+            <Clipboard height="16px" width="16px" />
+          </IconButton>
+        </Grid>
+        <Button sx={{ margin: "0 16px" }}>{"Get Started"}</Button>
+        <Button
+          endIcon={<Github fill="grey" height={25} width={25} />}
+          variant="outlined">
+          {"Github"}
+        </Button>
       </Grid>
     </Grid>
   );

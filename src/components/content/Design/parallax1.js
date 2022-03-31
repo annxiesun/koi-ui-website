@@ -7,25 +7,29 @@ function Parallax1() {
     <Grid sx={{ position: "relative" }}>
       <Parallax speed={-10}>
         <CardMedia
-          sx={{
+          sx={(theme) => ({
             height: "200px",
             width: "auto",
             objectFit: "contain",
-            marginLeft: "32px"
-          }}
+            marginLeft: "32px",
+            boxShadow: theme.shadows[1],
+            borderRadius: "20px"
+          })}
           component="img"
           src="/resources/images/colors.png"
         />
       </Parallax>
       <Parallax speed={-15}>
         <CardMedia
-          sx={{
+          sx={(theme) => ({
             position: "absolute",
             top: 0,
             height: "100px",
             objectFit: "contain",
-            width: "auto"
-          }}
+            width: "auto",
+            boxShadow: theme.shadows[1],
+            borderRadius: "20px"
+          })}
           component="img"
           src="/resources/images/iconcolors.png"
         />
