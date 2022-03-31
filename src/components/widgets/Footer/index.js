@@ -22,10 +22,13 @@ function Footer() {
       <Grid container alignItems="center" flexDirection="column">
         <Typography variant="body2">Made proudly in 🇨🇦</Typography>
         <Grid marginBottom={6}>
-          <IconButton>
+          <IconButton target="_blank" href="https://github.com/annxiesun/KoiUI">
             <Github fill="grey" height="20px" width="20px" />
           </IconButton>
-          <IconButton sx={{ marginLeft: "8px" }}>
+          <IconButton
+            sx={{ marginLeft: "8px" }}
+            target="_blank"
+            href="https://discord.gg/EGqK4BfB">
             <Discord fill="grey" height="20px" width="20px" />
           </IconButton>
         </Grid>

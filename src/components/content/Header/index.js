@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Grid, Typography, Button, IconButton } from "@mui/material";
-import { Github, Clipboard } from "../../widgets/Icons";
+import { Github, Clipboard, Checkmark } from "../../widgets/Icons";
 
 function Header() {
+  const npmCommand = "npm i @react-native-koi-ui";
+  const [copied, setCopied] = useState(false);
+
+  const copyNPM = () => {
+    navigator.clipboard.writeText(npmCommand);
+    setCopied(true);
+  };
+
   return (
     <Grid
       padding={10}
@@ -21,30 +29,45 @@ function Header() {
         justifyContent="flex-start"
         alignItems="center">
         <Grid
+          onClick={copyNPM}
           container
           item
           xs={5}
           alignItems="center"
           justifyContent="space-between"
-          sx={{
+          sx={() => ({
             borderRadius: "14px",
             padding: "8px 16px",
-            backgroundColor: "#ededed"
-          }}
+            backgroundColor: "#f2f2f2",
+            transition: "0.2s",
+            border: "#bababa 1px solid",
+            color: "#595959",
+            "&:hover": {
+              //boxShadow: theme.shadows[1],
+              transition: "0.2s",
+              backgroundColor: "#FFF",
+              border: "#58A5FF 1px solid",
+              color: "#58A5FF"
+            }
+          })}
           variant="body1">
-          <Typography
-            sx={{ fontFamily: "Poppins", color: "#595959" }}
-            variant="body2">
-            {"npm i @react-native-koi-ui"}
+          <Typography sx={{ fontFamily: "Poppins" }} variant="body2">
+            {npmCommand}
           </Typography>
           <IconButton>
-            <Clipboard height="16px" width="16px" />
+            {!copied ? (
+              <Clipboard height="16px" width="16px" />
+            ) : (
+              <Checkmark fill="#58A5FF" height="16px" width="16px" />
+            )}
           </IconButton>
         </Grid>
         <Button sx={{ margin: "0 16px" }}>{"Get Started"}</Button>
         <Button
           endIcon={<Github fill="grey" height={25} width={25} />}
-          variant="outlined">
+          variant="outlined"
+          target="_blank"
+          href="https://github.com/annxiesun/KoiUI">
           {"Github"}
         </Button>
       </Grid>

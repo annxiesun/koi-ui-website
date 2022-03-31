@@ -27,7 +27,6 @@ function Parallax2() {
             objectFit: "contain",
             width: "auto",
             marginLeft: "50px"
-
           })}
           component="img"
           src="/resources/images/focusimage.png"

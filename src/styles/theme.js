@@ -46,25 +46,32 @@ const theme = createTheme({
   shadows: [
     "none",
     "0px 5px 50px 5px rgba(0,0,0,0.04)",
-    "0px 5px 50px 5px rgba(0,0,0,0.1)",
+    "0px 5px 50px 5px rgba(0,0,0,0.1)"
   ],
   components: {
     MuiButton: {
       styleOverrides: {
         contained: {
           padding: "4px 24px",
+          borderRadius: "10px",
           background:
             "linear-gradient(150deg, rgba(88,165,255,1) 0%, rgba(96,228,221,1) 100%)"
         },
         outlined: {
           padding: "4px 24px",
           borderColor: "grey",
-          color: "grey"
+          color: "grey",
+          borderRadius: "10px",
+          "&:hover": {
+            borderColor: "#696969",
+            color: "#696969"
+          }
         },
         text: {
           padding: "4px 24px",
           background: "rgba(256,256,256,0.3)",
-          color: "white"
+          color: "white",
+          borderRadius: "10px"
         }
       },
       defaultProps: {

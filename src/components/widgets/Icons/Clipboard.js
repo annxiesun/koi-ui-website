@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Github({ ...props }) {
+export default function Clipboard({ ...props }) {
   return (
     <svg
       {...props}

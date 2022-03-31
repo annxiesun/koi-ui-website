@@ -1,22 +1,22 @@
 import React from "react";
 
-import { Box, Grid, IconButton, Button, CardMedia } from "@mui/material";
+import { Grid, IconButton, Button, CardMedia } from "@mui/material";
 import { Github, Discord } from "../Icons";
 
 function Navbar() {
   return (
     <Grid
-      sx={(theme) => ({
+      sx={() => ({
         backgroundColor: "#FFF",
         borderRadius: "24px",
         position: "fixed",
-        top: "10px",
+        top: "0px",
         left: "50%",
-        width: "95%",
+        width: "100%",
         zIndex: 90,
         boxSizing: "border-box",
-        transform: "translateX(-50%)",
-        boxShadow: theme.shadows[1]
+        transform: "translateX(-50%)"
+        //boxShadow: theme.shadows[1]
       })}
       padding={2}
       container
@@ -29,13 +29,19 @@ function Navbar() {
         src={"resources/images/logo.svg"}
       />
       <Grid>
-        <IconButton sx={{ marginLeft: "8px" }}>
+        <IconButton
+          sx={{ marginLeft: "8px" }}
+          target="_blank"
+          href="https://github.com/annxiesun/KoiUI">
           <Github fill="grey" height="30px" width="30px" />
         </IconButton>
-        <IconButton sx={{ marginLeft: "8px" }}>
+        <IconButton
+          sx={{ marginLeft: "8px" }}
+          target="_blank"
+          href="https://discord.gg/EGqK4BfB">
           <Discord fill="grey" height="30px" width="30px" />
         </IconButton>
-        <Button variant="outlined" sx={{ marginLeft: "8px" }}>
+        <Button sx={{ fontSize: "16px", marginLeft: "8px" }} variant="outlined">
           {"Docs"}
         </Button>
       </Grid>

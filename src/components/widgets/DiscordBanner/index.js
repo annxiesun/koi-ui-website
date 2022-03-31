@@ -26,7 +26,9 @@ function DiscordBanner() {
           </Typography>
         </Grid>
       </Grid>
-      <Button variant="text">{"Join the #Koi Discord"}</Button>
+      <Button variant="text" target="_blank" href="https://discord.gg/EGqK4BfB">
+        {"Join the #Koi Discord"}
+      </Button>
     </Grid>
   );
 }
