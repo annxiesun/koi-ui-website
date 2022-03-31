@@ -40,6 +40,13 @@ const theme = createTheme({
         disableElevation: true,
         variant: "contained"
       }
+    },
+    MuiIconButton: {
+      defaultProps: {
+        disableRipple: true,
+        disableElevation: true,
+        variant: "contained"
+      }
     }
   }
 });

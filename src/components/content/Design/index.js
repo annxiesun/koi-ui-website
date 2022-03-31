@@ -3,6 +3,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import { Grid, Typography } from "@mui/material";
 import Parallax1 from "./parallax1";
 import Parallax2 from "./parallax2";
+import Parallax3 from "./parallax3";
 
 function Design() {
   return (
@@ -28,7 +29,7 @@ function Design() {
           flexDirection="row"
           alignItems="center"
           justifyContent="space-between">
-          <Grid flexDirection="column" xs={6}>
+          <Grid flexDirection="column" xs={12} md={5}>
             <Typography variant="header3">{content[0].title}</Typography>
             <Typography variant="body1">{content[0].text}</Typography>
           </Grid>
@@ -41,7 +42,7 @@ function Design() {
           alignItems="center"
           justifyContent="space-between">
           {content[1].graphic}
-          <Grid flexDirection="column" xs={6}>
+          <Grid flexDirection="column" xs={12} md={5}>
             <Typography variant="header3">{content[1].title}</Typography>
             <Typography variant="body1">{content[1].text}</Typography>
           </Grid>
@@ -50,12 +51,13 @@ function Design() {
           marginBottom={30}
           container
           flexDirection="row"
+          alignItems="center"
           justifyContent="space-between">
-          <Grid flexDirection="column" xs={6}>
+          <Grid flexDirection="column" xs={12} md={5}>
             <Typography variant="header3">{content[2].title}</Typography>
             <Typography variant="body1">{content[2].text}</Typography>
           </Grid>
-          {content[0].graphic}
+          {content[2].graphic}
         </Grid>
       </Grid>
     </ParallaxProvider>
@@ -81,7 +83,7 @@ const content = [
     text: "Components built around the best modern mobile app practices."
   },
   {
-    graphic: <Parallax1 />,
+    graphic: <Parallax3 />,
     title: "Consistency being key",
     text: "A fast and simple solution for highly customized components through theming"
   }

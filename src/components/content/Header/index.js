@@ -4,7 +4,12 @@ import { Grid, Typography, Button } from "@mui/material";
 
 function Header() {
   return (
-    <Grid padding={10} container alignContent="center" height="100vh">
+    <Grid
+      padding={10}
+      container
+      alignContent="center"
+      height="100vh"
+      sx={{ maxHeight: "900px" }}>
       <Grid marginBottom={10} xs={9}>
         <Typography variant="header1">{text[0]}</Typography>
         <Typography variant="body1">{text[1]}</Typography>

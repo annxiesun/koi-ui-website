@@ -1,34 +1,41 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
 
-import Github from '../Icons/Github';
-import { withStyles } from "@material-ui/core/styles";
-import {Grid, Typography, Button, } from '@mui/material';
-import styles from './styles';
+import { Grid, Typography, Button, CardMedia } from "@mui/material";
 
-function Header({ }) {
+function DiscordBanner() {
   return (
-    <Grid padding={10} container alignContent="center" height="100vh">
-      <Grid marginBottom={10} xs={9}>
-      <Typography variant="header1">{text[0]}</Typography>
-      <Typography variant="body1">{text[1]}</Typography>
+    <Grid
+      sx={{ backgroundColor: "#5865F2", borderRadius: "32px" }}
+      padding={5}
+      container
+      alignContent="center"
+      alignItems="center"
+      justifyContent="space-between">
+      <Grid container xs={9} flexDirection="row" alignItems="center">
+        <CardMedia
+          component="img"
+          sx={{ height: "50px", width: "auto", marginRight: "24px" }}
+          src="resources/images/discord.svg"
+        />
+        <Grid>
+          <Typography sx={{ color: "white" }} variant="header3">
+            {text[0]}
+          </Typography>
+          <Typography sx={{ color: "white" }} variant="body1">
+            {text[1]}
+          </Typography>
+        </Grid>
       </Grid>
-      <Grid container flexDirection="row" justifyContent="flex-start">
-          <Typography variant="body1">{'npm i @react-native-koi-ui'}</Typography>
-        <Button>{"Get Started"}</Button>
-        <Button variant="outlined">{'Github'}</Button>
-      </Grid>
+      <Button>{"Join the #Koi Discord"}</Button>
     </Grid>
   );
 }
 
-Header.propTypes = {
-
-}
+DiscordBanner.propTypes = {};
 
 const text = [
-  'Create Seamless Mobile Experiences',
-  'Koi UI is the first fully customizable, mobile-first React Native Library',
-]
+  "Join our Discord!",
+  "Ask questions, report issues, and meet people!"
+];
 
-export default withStyles(styles)(Header);
+export default DiscordBanner;
