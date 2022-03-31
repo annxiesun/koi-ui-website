@@ -1,18 +1,14 @@
+import React from "react";
+import { Header, Features, Demo } from "./content";
+import { Container } from "@mui/material";
 
-import React, { FunctionComponent } from 'react';
-import Header from './content/Header';
-import './MasterView.css';
-
-
-function MasterView({ }) {
-  const menuItems = [
-    { label: 'Why Me?', id: 'about-me' },
-    { label: 'My Work', id: 'work' },
-    { label: 'Projects', id: 'projects' },
-    { label: 'Contact Me', id: 'contact' }];
-
+function MasterView() {
   return (
-    <Header />
+    <Container maxWidth="xl">
+      <Header />
+      <Features />
+      <Demo />
+    </Container>
   );
 }
 

@@ -1,6 +1,8 @@
 import React from "react";
 
+import { withStyles } from "@material-ui/core/styles";
 import { Grid, Typography, Button } from "@mui/material";
+import styles from "./styles";
 
 function Header() {
   return (
@@ -25,4 +27,4 @@ const text = [
   "Koi UI is the first fully customizable, mobile-first React Native Library"
 ];
 
-export default Header;
+export default withStyles(styles)(Header);

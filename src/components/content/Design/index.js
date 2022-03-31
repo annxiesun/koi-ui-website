@@ -2,7 +2,7 @@ import React from "react";
 
 import { Grid, Typography, Button } from "@mui/material";
 
-function Header() {
+function Design() {
   return (
     <Grid padding={10} container alignContent="center" height="100vh">
       <Grid marginBottom={10} xs={9}>
@@ -18,11 +18,11 @@ function Header() {
   );
 }
 
-Header.propTypes = {};
+Design.propTypes = {};
 
 const text = [
   "Create Seamless Mobile Experiences",
   "Koi UI is the first fully customizable, mobile-first React Native Library"
 ];
 
-export default Header;
+export default Design;
