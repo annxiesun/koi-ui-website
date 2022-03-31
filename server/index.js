@@ -6,6 +6,7 @@ require("dotenv").config();
 
 app.use(cors());
 
+/*
 let transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -23,16 +24,15 @@ transporter.verify((err, success) => {
     ? console.log(err)
     : console.log(`=== Server is ready to take messages: ${success} ===`);
 });
-
+*/
 
 const path = require("path");
-
 
 const mainRoute = encodeURI("/");
 
 app.use(mainRoute, express.static(path.join(__dirname, "..", "build")));
 app.use(mainRoute, express.static("public"));
-app.get(mainRoute, (req, res, next) => {
+app.get(mainRoute, (req, res) => {
   res.sendFile(path.join(__dirname, "..", "build", "index.html"));
 });
 
@@ -57,5 +57,5 @@ app.post(sendRoute, function (req, res) {
 });
 
 app.listen(process.env.PORT , () => {
-  console.log(`Server is running}`);
+  console.log(`Server is running on ${process.env.PORT}`);
 });
