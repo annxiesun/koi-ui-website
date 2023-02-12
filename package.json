@@ -34,7 +34,7 @@
   "scripts": {
     "start": "cd server && nodemon index",
     "postinstall": "npm run build",
-    "start-client": "react-scripts start",
+    "start-client": "react-scripts --openssl-legacy-provider start",
     "start-full": "npm run build && (cd server && nodemon index)",
     "build": "react-scripts build",
     "test": "react-scripts test",
